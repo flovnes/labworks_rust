@@ -66,7 +66,7 @@ fn print_array(array: &Vec<i32>) {
     );
 }
 
-fn solution(array: &Vec<i32>) -> i32 {
+fn solution(array: &Vec<i32>) -> f32 {
     let mut sum = 0;
     let max_index = array
         .iter()
@@ -92,7 +92,7 @@ fn solution(array: &Vec<i32>) -> i32 {
     }
     println!("\"");
 
-    sum
+    sum as f32 / (max_index - min_index + 1) as f32
 }
 
 fn read_line() -> String {
